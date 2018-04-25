@@ -18,8 +18,6 @@ namespace HGEnzine
 int main(int /* argc */, char* /* argv */[])
 {
   std::make_shared<SandBox::Game>()->run();
-  // SandBox::Game game;
-  // game.run();
 
   puts("Quit main()");
 

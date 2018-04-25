@@ -17,7 +17,6 @@ namespace HGEnzine::core
   Application::~Application()
   {
     delete m_mainWindow;
-    m_mainWindow = nullptr;
 
     puts("Application destructor called");
   }
@@ -25,6 +24,7 @@ namespace HGEnzine::core
   void Application::run()
   {
     m_mainWindow->open();
+
     while(m_mainWindow->getIsRunning())
     {
       m_mainWindow->update();
@@ -39,6 +39,7 @@ namespace HGEnzine::core
   void Application::quit()
   {
     puts("Application quit()");
+
     m_mainWindow->close();
   }
 

@@ -13,9 +13,6 @@ namespace SandBox
 
     public:
       void run() override;
-
-    private:
-      friend class HGEnzine::core::Application;
   };
 }
 

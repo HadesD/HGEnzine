@@ -26,6 +26,15 @@ namespace HGEnzine::core
   Window::~Window()
   {
     puts("Window destructor called");
+
+    if (m_window)
+    {
+      puts("SDL DestroyWindow()");
+      SDL_DestroyWindow(m_window);
+      puts("SDL DestroyWindow() end");
+    }
+
+    SDL_Quit();
   }
 
   bool Window::init()
@@ -138,16 +147,6 @@ namespace HGEnzine::core
     puts("Window close()");
 
     m_isRunning = false;
-
-    if (m_window)
-    {
-      puts("SDL DestroyWindow()");
-      SDL_DestroyWindow(m_window);
-    }
-
-    SDL_Quit();
-
-    puts("Quit SDL window");
   }
 
   uint Window::getWidth() const

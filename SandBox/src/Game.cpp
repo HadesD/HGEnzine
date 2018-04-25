@@ -6,7 +6,6 @@ namespace SandBox
 {
   Game::Game() : HGEnzine::core::Application()
   {
-    SandBox::TestInputs inputs;
   }
 
   Game::~Game()
@@ -16,8 +15,8 @@ namespace SandBox
 
   void Game::run()
   {
+    SandBox::TestInputs inputs;
     HGEnzine::core::Application::run();
-    puts("Game run() end");
   }
 }
 

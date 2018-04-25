@@ -28,7 +28,10 @@ run: sb
 clean:
 	cd build \
 		&& git clean -Xdf .
+	cd SandBox/build \
+		&& git clean -Xdf .
 
 rm:
-	rm -rf ./bin
+	rm -rf bin
+	rm -rf SandBox/bin
 

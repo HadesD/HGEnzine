@@ -13,6 +13,7 @@ namespace SandBox
       if (e.keysym.sym == SDLK_q)
       {
         HGEnzine::core::Application::getInstance().quit();
+        // HGEnzine::core::Application::getInstance().getMainWindow()->setIsRunning(false);
       }
     });
     Keyboard::onKeyDown.push_back([&](const SDL_KeyboardEvent& event){
