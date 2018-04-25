@@ -135,10 +135,13 @@ namespace HGEnzine::core
 
   void Window::close()
   {
+    puts("Window close()");
+
     m_isRunning = false;
 
     if (m_window)
     {
+      puts("SDL DestroyWindow()");
       SDL_DestroyWindow(m_window);
     }
 

@@ -15,29 +15,32 @@ namespace HGEnzine::core
   extern HGENZINE_API const WindowProperties g_mainWindowProperties;
   extern HGENZINE_API const std::string g_mainWindowTitle;
 
-  class HGENZINE_API Application final : public utils::Singleton<Application>
+  class HGENZINE_API Application : public utils::Singleton<Application>
   {
     private:
       Window* m_mainWindow;
 
-    private:
+    protected:
       Application();
-      ~Application();
+
+    public:
+      virtual ~Application();
 
     public:
       /**
        * App Loop
        */
-      void run();
+      virtual void run();
       void pause();
       void quit();
+
+    public:
+      Window* getMainWindow() const;
 
     public:
       friend class utils::Singleton<Application>;
   };
 }
-
-#define AppInstance ::HGEnzine::core::Application::getInstance()
 
 #endif
 

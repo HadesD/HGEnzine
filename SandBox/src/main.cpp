@@ -1,4 +1,6 @@
-#include "sandbox/TestInputs.hpp"
+#include "sandbox/Game.hpp"
+
+#include <memory>
 
 // Initialize
 namespace HGEnzine
@@ -15,9 +17,9 @@ namespace HGEnzine
 
 int main(int /* argc */, char* /* argv */[])
 {
-  SandBox::TestInputs inputs;
-
-  AppInstance.run();
+  std::make_shared<SandBox::Game>()->run();
+  // SandBox::Game game;
+  // game.run();
 
   puts("Quit main()");
 

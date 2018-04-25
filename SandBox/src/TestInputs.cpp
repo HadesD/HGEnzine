@@ -1,15 +1,18 @@
 #include "sandbox/TestInputs.hpp"
 
+#include "sandbox/Game.hpp"
+
 namespace SandBox
 {
   TestInputs::TestInputs()
   {
+    puts("Register inputs");
     // TEST
     using namespace HGEnzine::inputs;
     Keyboard::onKeyDown.push_back([&](const SDL_KeyboardEvent& e){
       if (e.keysym.sym == SDLK_q)
       {
-        AppInstance.quit();
+        HGEnzine::core::Application::getInstance().quit();
       }
     });
     Keyboard::onKeyDown.push_back([&](const SDL_KeyboardEvent& event){

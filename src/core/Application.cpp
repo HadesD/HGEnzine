@@ -38,7 +38,13 @@ namespace HGEnzine::core
 
   void Application::quit()
   {
+    puts("Application quit()");
     m_mainWindow->close();
+  }
+
+  Window* Application::getMainWindow() const
+  {
+    return m_mainWindow;
   }
 }
 
