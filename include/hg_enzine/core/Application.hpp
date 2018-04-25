@@ -12,8 +12,8 @@ namespace HGEnzine::core
   struct WindowProperties;
   class Window;
 
-  extern const WindowProperties g_mainWindowProperties;
-  extern const std::string g_mainWindowTitle;
+  extern HGENZINE_API const WindowProperties g_mainWindowProperties;
+  extern HGENZINE_API const std::string g_mainWindowTitle;
 
   class HGENZINE_API Application final : public utils::Singleton<Application>
   {

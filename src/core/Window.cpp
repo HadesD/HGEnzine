@@ -69,11 +69,11 @@ namespace HGEnzine::core
     }
 
     m_isRunning = true;
+  }
 
-    while (m_isRunning)
-    {
-      this->updateEvent();
-    }
+  void Window::update()
+  {
+    this->updateEvent();
   }
 
   void Window::updateEvent()

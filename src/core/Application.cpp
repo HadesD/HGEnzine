@@ -25,6 +25,10 @@ namespace HGEnzine::core
   void Application::run()
   {
     m_mainWindow->open();
+    while(m_mainWindow->getIsRunning())
+    {
+      m_mainWindow->update();
+    }
   }
 
   void Application::pause()

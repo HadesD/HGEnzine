@@ -53,6 +53,7 @@ namespace HGEnzine::core
 
     public:
       void open();
+      void update();
       void close();
 
     public:

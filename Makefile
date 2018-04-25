@@ -23,7 +23,7 @@ sb:
 		&& make -j$(shell nproc)
 
 run: sb
-	./bin/HGEnzine
+	./SandBox/bin/SandBox
 
 clean:
 	cd build \
