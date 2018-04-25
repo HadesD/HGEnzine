@@ -17,7 +17,12 @@ release:
 		&& make -j$(shell nproc)
 	ln -svf $(shell pwd)/bin/Release/HGEnzine $(shell pwd)/bin/HGEnzine
 
-run:
+sb:
+	cd SandBox/build \
+		&& cmake .. \
+		&& make -j$(shell nproc)
+
+run: sb
 	./bin/HGEnzine
 
 clean:

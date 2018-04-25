@@ -10,8 +10,5 @@ set(SRC_FILES
 
   # Events
   src/events/Event.cpp
-
-  # TEST
-  tests/main.cpp
   )
 
