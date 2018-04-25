@@ -1,0 +1,12 @@
+include/SDL_config.h
+Makefile
+Makefile.rules
+config.log
+config.status
+gen/
+libtool
+sdl2-config
+sdl2-config.cmake
+sdl2.pc
+aclocal.m4
+autom4te.cache/
