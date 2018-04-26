@@ -65,7 +65,7 @@ namespace HGEnzine::core
 
       if (!m_window)
       {
-        puts("Error while creating window");
+        printf("Error while creating window: %s", SDL_GetError());
         return;
       }
 
