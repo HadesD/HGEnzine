@@ -5,11 +5,11 @@
 
 namespace SandBox
 {
-  class Game : public HGEnzine::core::Application
+  class Game
   {
     public:
       Game();
-      ~Game() override;
+      ~Game();
   };
 }
 

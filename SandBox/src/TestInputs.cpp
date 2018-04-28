@@ -8,14 +8,17 @@ namespace SandBox
   {
     puts("Register inputs");
     // TEST
+        std::cout << "This App Q: "
+        << HGEnzine::core::Application::getInstance()
+        << std::endl;
     using namespace HGEnzine::inputs;
     Keyboard::onKeyDown.push_back([&](const SDL_KeyboardEvent& e){
       if (e.keysym.sym == SDLK_q)
       {
-        HGEnzine::core::Application::getInstance()->quit();
         std::cout << "This App Q: "
         << HGEnzine::core::Application::getInstance()
         << std::endl;
+        HGEnzine::core::Application::getInstance()->quit();
       }
     });
     Keyboard::onKeyDown.push_back([&](const SDL_KeyboardEvent& event){

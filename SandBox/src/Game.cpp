@@ -4,7 +4,7 @@
 
 namespace SandBox
 {
-  Game::Game() : HGEnzine::core::Application()
+  Game::Game()
   {
     SandBox::TestInputs inputs;
   }

@@ -46,6 +46,7 @@ namespace HGEnzine::core
       {
         if (!s_instance)
         {
+          puts("Make new Application Instance");
           s_instance = new Application();
         }
         return s_instance;
