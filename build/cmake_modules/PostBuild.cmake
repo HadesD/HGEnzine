@@ -1,6 +1,7 @@
 # Gen compile_commands.json
 if (${CMAKE_EXPORT_COMPILE_COMMANDS} STREQUAL ON)
   find_program(COMPDB compdb)
+  message(WARNING ${COMPDB})
   if (COMPDB)
     add_custom_command(TARGET ${PROJECT_NAME}
       POST_BUILD

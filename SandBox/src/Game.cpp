@@ -16,6 +16,9 @@ namespace SandBox
   void Game::run()
   {
     SandBox::TestInputs inputs;
+    std::cout << "GameRun - APP ID: "
+    << &HGEnzine::core::Application::getInstance()
+    << std::endl;
     HGEnzine::core::Application::run();
   }
 }

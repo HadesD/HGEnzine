@@ -12,8 +12,10 @@ namespace SandBox
     Keyboard::onKeyDown.push_back([&](const SDL_KeyboardEvent& e){
       if (e.keysym.sym == SDLK_q)
       {
-        HGEnzine::core::Application::getInstance().quit();
-        // HGEnzine::core::Application::getInstance().getMainWindow()->setIsRunning(false);
+        (&HGEnzine::utils::Singleton<HGEnzine::core::Application>::getInstance())->quit();
+        std::cout << "This App Q: "
+        << &HGEnzine::core::Application::getInstance()
+        << std::endl;
       }
     });
     Keyboard::onKeyDown.push_back([&](const SDL_KeyboardEvent& event){

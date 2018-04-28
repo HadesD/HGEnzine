@@ -11,6 +11,7 @@ include(BuildConfig)
 include(LinkLibraries)
 # }
 
+# add_library(${PROJECT_NAME} SHARED ${SRC_FILES})
 add_library(${PROJECT_NAME} ${SRC_FILES})
 target_link_libraries(${PROJECT_NAME} ${LIBS_REQUIRED})
 
