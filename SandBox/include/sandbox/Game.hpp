@@ -10,9 +10,6 @@ namespace SandBox
     public:
       Game();
       ~Game() override;
-
-    public:
-      void run() override;
   };
 }
 

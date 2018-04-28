@@ -8,13 +8,26 @@ namespace HGEnzine::utils
   template<class T>
   class HGENZINE_API Singleton
   {
+    private:
+      static T* s_instance;
+
+    protected:
+      // Singleton();
+      // virtual ~Singleton() = delete;
+
     public:
-      static T& getInstance()
+      static T* getInstance()
       {
-        static T instance;
-        return instance;
+        if (!s_instance)
+        {
+          s_instance = new T();
+        }
+        return s_instance;
       }
   };
+
+  template<class T>
+  T* Singleton<T>::s_instance = nullptr;
 }
 
 #endif
