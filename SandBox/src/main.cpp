@@ -17,8 +17,7 @@ namespace HGEnzine
 
 int main(int /* argc */, char* /* argv */[])
 {
-  SandBox::Game g;
-  HGEnzine::core::Application::getInstance()->run();
+  std::make_shared<SandBox::Game>()->run();
 
   puts("Quit main()");
 

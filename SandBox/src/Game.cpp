@@ -13,5 +13,11 @@ namespace SandBox
   {
     puts("Game destructor()");
   }
+
+  void Game::run()
+  {
+    // Must Run this
+    HGEnzine::core::Application::getInstance().run();
+  }
 }
 

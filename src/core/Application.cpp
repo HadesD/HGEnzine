@@ -6,13 +6,8 @@
 
 namespace HGEnzine::core
 {
-  Application* Application::s_instance = nullptr;
-  int Application::c = 0;
-
   Application::Application()
   {
-    c++;
-    std::cout << "Instances: " << c << std::endl;
     m_mainWindow = new Window(
       g_mainWindowTitle,
       g_mainWindowProperties
@@ -26,6 +21,12 @@ namespace HGEnzine::core
     delete m_mainWindow;
 
     puts("Application destructor called");
+  }
+
+  Application& Application::getInstance()
+  {
+    static Application instance;
+    return instance;
   }
 
   void Application::run()

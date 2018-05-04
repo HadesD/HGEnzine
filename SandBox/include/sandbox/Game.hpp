@@ -10,6 +10,9 @@ namespace SandBox
     public:
       Game();
       ~Game();
+
+    public:
+      void run();
   };
 }
 

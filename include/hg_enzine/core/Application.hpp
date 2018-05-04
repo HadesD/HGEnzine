@@ -15,12 +15,8 @@ namespace HGEnzine::core
   extern HGENZINE_API const WindowProperties g_mainWindowProperties;
   extern HGENZINE_API const std::string g_mainWindowTitle;
 
-  class HGENZINE_API Application//  : public utils::Singleton<Application>
+  class HGENZINE_API Application final
   {
-    private:
-      static Application* s_instance;
-      static int c;
-
     private:
       Window* m_mainWindow;
 
@@ -42,15 +38,7 @@ namespace HGEnzine::core
       Window* getMainWindow() const;
 
     public:
-      static Application* getInstance()
-      {
-        if (!s_instance)
-        {
-          puts("Make new Application Instance");
-          s_instance = new Application();
-        }
-        return s_instance;
-      }
+      static Application& getInstance();
 
     public:
       friend class utils::Singleton<Application>;
