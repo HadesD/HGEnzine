@@ -12,8 +12,6 @@ namespace HGEnzine::core
       g_mainWindowTitle,
       g_mainWindowProperties
       );
-    std::cout << "This Window: " << &m_mainWindow << std::endl;
-    std::cout << "This App: " << this << std::endl;
   }
 
   Application::~Application()

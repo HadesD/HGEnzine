@@ -105,7 +105,6 @@ namespace HGEnzine::core
           {
             e(event.key);
           }
-          printf("RUNNING?: %d\n", m_isRunning);
           break;
         case SDL_KEYUP:
           for (const auto& e : inputs::Keyboard::onKeyUp)
